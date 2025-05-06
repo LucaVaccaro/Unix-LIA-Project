@@ -1,1 +1,43 @@
+# Project Choices
+
+## VPS Hosting Provider
+
+Chosen VPS Provider: Lightsail
+
+Reason for Choice:
+  - Lightsail had a very simple and easy interface, making it a good choice for beginners.
+  - It provides 90 day free trail for VPS hosting with good performance for projects.
+
+## Operating System
+
+Chosen OS:** Debian
+
+Reason for Choice:
+  - Debian is known for its stability and security, making it good for server environments.
+  - I enjoy using Debian more than other OS like Ubuntus.
+  - It uses minimal resources, which is important for VPS hosting.
+
+Web Server
+
+Chosen Web Server: Nginx
+
+Reason for Choice:
+  - I have experience using Nginx.
+  - It’s lightweight, and easy to configure.
+  
+Firewall
+
+Chosen Firewall: UFW (Uncomplicated Firewall)
+
+Reason for Choice:
+  - UFW is simple to configure and manage, making it ideal for securing the server without the complexity of more advanced firewall configurations.
+  - It supports basic rules for controlling access to the server (allowing SSH and HTTP traffic).
+
+Website Deployment
+
+Chosen Deployment Strategy: unsure
+
+Reason for Choice:
+
+
 
