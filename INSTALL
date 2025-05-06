@@ -1,1 +1,13 @@
+# Installation Instructions for Setting Up the VPS
 
+1. Set Up the VPS on AWS Lightsail
+- Go to the AWS Lightsail console.
+- Create a new instance with Debian as the OS.
+- Choose a plan based on what you need.
+- Set up SSH access and note the public IP address of the instance.
+
+2. Update the System
+Once connected to the VPS via SSH, update the package list and install available updates:
+commads:
+sudo apt update
+sudo apt upgrade -y
