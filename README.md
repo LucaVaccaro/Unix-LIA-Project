@@ -1,9 +1,9 @@
-# LIA Project – Web Server VPS using AWS (Debian)
+# LIA Project – Web Server VPS using Lightsail (Debian)
 
-This project sets up a secure web server on AWS using Debian 12.
+This project sets up a secure web server on Lightsail using Debian 12.
 
 ## Features
-- Hosted on AWS EC2 (Debian)
+- Hosted on Lightsail (Debian)
 - Nginx-based web server
 - Auto-deployment from GitHub
 - Secure setup (firewall, SSH keys)
