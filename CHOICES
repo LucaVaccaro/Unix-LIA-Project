@@ -5,25 +5,42 @@
 Chosen VPS Provider: Lightsail
 
 Reason for Choice:
+
   - Lightsail had a very simple and easy interface, making it a good choice for beginners.
   - It provides 90 day free trail for VPS hosting with good performance for projects.
+
+Alternatives Considered:
+
+- AWS EC2: More customizable and powerful but much more complex, not so beginner friendly.
+- DigitalOcean: A good alternative with similar pricing and performance, but Lightsail's free trial and easier interface made it more appealing.
 
 ## Operating System
 
 Chosen OS:** Debian
 
 Reason for Choice:
+
   - Debian is known for its stability and security, making it good for server environments.
   - I enjoy using Debian more than other OS like Ubuntus.
   - It uses minimal resources, which is important for VPS hosting.
+
+Alternatives Considered:
+
+- Ubuntu: Very popular and has better community support, but I prefer Debian.
+- CentOS: Was once known for stability but has become less ideal after it got rebuild of red hat enterprise linux. This impacted the stability and commpatibility.
 
 Web Server
 
 Chosen Web Server: Nginx
 
 Reason for Choice:
-  - I have experience using Nginx.
-  - It’s lightweight, and easy to configure.
+
+- I have experience using Nginx.
+- It’s lightweight, and easy to configure.
+
+Alternatives Considered:
+
+- Apache: More flexible and widely used, but heavier and not as fast in handling static files compared to Nginx.
   
 Firewall
 
@@ -35,9 +52,16 @@ Reason for Choice:
 
 Website Deployment
 
-Chosen Deployment Strategy: unsure
+Chosen Deployment Strategy:  Webhook-based Auto-Deployment
 
-Reason for Choice:
+Reason for Choice: 
 
+- I use a index.html and style.css stored in my GitHub repository.
+- I configured a webhook service that listens for changes and automatically pulls the latest changes to the VPS.
+- It avoids the need to manually SSH into the server for every update.
 
+Alternatives Considered:
+
+- Manual Deployment via SSH: Involves logging into the VPS and pulling changes manually. While simple, it’s time-consuming.
+- GitHub Actions CI/CD: A powerful alternative that integrates tightly with GitHub. However it's complex and and has a lot more steps compared to a webhook for this lightweight use.
 
