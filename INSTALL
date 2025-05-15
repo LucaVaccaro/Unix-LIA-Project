@@ -1,13 +1,67 @@
-# Installation Instructions for Setting Up the VPS
+# INSTALL Instructions
 
-1. Set Up the VPS on AWS Lightsail
+## Prerequisites
+
+- Linux server with systemd
+- Git installed
+- Webhook installed
+
+## Installation Instructions for Setting Up the VPS
+
 - Go to the AWS Lightsail console.
 - Create a new instance with Debian as the OS.
 - Choose a plan based on what you need.
 - Set up SSH access and note the public IP address of the instance.
 
-2. Update the System
+## Update the System
 Once connected to the VPS via SSH, update the package list and install available updates:
+
 commads:
 sudo apt update
 sudo apt upgrade -y
+
+## Download the Following Packages
+
+- Git
+- Webhook installed
+
+## Ports and Firewall Configuration
+
+Ports Used: 
+    -Port 80 (HTTP) : Used for web server(Nginx) to serve website over HTTP. People can access the website using this port.
+    -Port 9000 (Webhook port) : This port is where the webhook service listens for incoming HTTP POST requests from Github.
+
+Configuring UFW:
+
+sudo ufw allow 80/tcp
+sudo ufw allow 9000/tcp
+sudo ufw enable
+sudo ufw status
+
+## Setup
+
+1. Clone this repository to your server: git clone https://github.com/YourRepo/Unix-LIA-Project.git
+
+cd Unix-LIA-Project
+
+2. Copy config files to their locations:
+
+- Webhook hooks config: `/etc/webhook/hooks.json`  
+- Webhook systemd service: `/etc/systemd/system/webhook.service`
+- Deploy script: `/var/www/html/deploy.sh`  
+
+3. Reload systemd and enable webhook service:
+
+sudo systemctl daemon-reload
+sudo systemctl enable webhook
+sudo systemctl start webhook
+
+4. Ensure file permissions:
+
+sudo chown -R admin:admin /var/www/html
+sudo chmod +x /var/www/html/deploy.sh
+
+5. Test webhook by pushing to your GitHub repo.
+
+
+
