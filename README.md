@@ -1,6 +1,14 @@
 # LIA Project – Web Server VPS using Lightsail (Debian)
 
-This project sets up a secure web server on Lightsail using Debian 12.
+## Project Proposal:
+
+The goal of this project is to set up a secure and automated web server environment using a VPS hosted on AWS Lightsail running Debian 12. The web server will serve a simple static website (index.html and style.css) and support automatic deployment triggered by GitHub commits via a webhook. This setup is aimed at a fictitious small business or developer who needs a low-cost, reliable server with minimal maintenance, basic security, and streamlined deployment.
+
+Key components integrated into the project include:
+
+- Basic system setup and security (user accounts, SSH keys, firewall configuration)
+- Web server setup using Nginx for lightweight and efficient service
+- Automated deployment triggered by webhook and GitHub commits
 
 ## Features
 
@@ -37,6 +45,7 @@ Refer to the INSTALL.md file for the complete instructions on setting up the VPS
 - Added Timeline.
 
 ### Week 3:
+
 - Added `index.html` and `style.css` website files to the repository.
 - Implemented a webhook service for auto-deployment from GitHub.
 - Updated the `INSTALL.md` file with webhook setup instructions.
