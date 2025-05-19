@@ -25,6 +25,29 @@ sudo apt upgrade -y
 - Git
 - Webhook installed
 
+Json nano: sudo nano /etc/systemd/system/webhook.service
+
+[Unit]
+
+Description=Webhook Listener
+
+After=network.target
+
+[Service]
+
+ExecStart=/usr/bin/webhook -hooks /etc/webhook/hooks.json -port 9000 -verbose
+
+WorkingDirectory=/var/www/html
+
+User=admin
+
+Restart=always
+
+
+[Install]
+
+WantedBy=multi-user.target
+
 ## Ports and Firewall Configuration
 
 Ports Used: 
